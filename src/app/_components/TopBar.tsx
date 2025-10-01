@@ -1,10 +1,11 @@
 import Image from "next/image";
 import CreditBadge from "./CreditBadge";
+import Link from "next/link";
 
 export default function TopBar() {
   return (
     <header className="flex w-full items-center justify-between border-b border-gray-200 bg-white px-6 py-4">
-      <div className="flex items-center gap-3">
+      <Link href="/" className="flex items-center gap-3">
         <div className="flex h-10 w-10 items-center justify-center">
           <Image
             src="/logo.png"
@@ -17,7 +18,7 @@ export default function TopBar() {
         <span className="text-xl font-semibold text-gray-900">
           Getrude Chat
         </span>
-      </div>
+      </Link>
       <div className="flex items-center gap-4">
         <CreditBadge credits={42} />
         <div className="flex items-center gap-3">
