@@ -14,16 +14,19 @@ export default function PromptInput({
       {/* Quick Suggestions */}
       <div className="flex flex-wrap gap-2">
         <button className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1.5 text-sm text-blue-700 transition-colors hover:bg-blue-100">
-          Hospital policies
+          Pediatric dosing
         </button>
         <button className="inline-flex items-center rounded-full bg-green-50 px-3 py-1.5 text-sm text-green-700 transition-colors hover:bg-green-100">
-          Emergency procedures
+          Emergency protocols
         </button>
         <button className="inline-flex items-center rounded-full bg-purple-50 px-3 py-1.5 text-sm text-purple-700 transition-colors hover:bg-purple-100">
-          Patient data analysis
+          Patient outcomes
         </button>
         <button className="inline-flex items-center rounded-full bg-orange-50 px-3 py-1.5 text-sm text-orange-700 transition-colors hover:bg-orange-100">
-          Medication guidelines
+          Treatment guidelines
+        </button>
+        <button className="inline-flex items-center rounded-full bg-pink-50 px-3 py-1.5 text-sm text-pink-700 transition-colors hover:bg-pink-100">
+          Vaccination schedules
         </button>
       </div>
 
@@ -33,7 +36,7 @@ export default function PromptInput({
           <div className="flex items-center">
             <input
               className="w-full resize-none rounded-xl border border-gray-300 py-4 pr-20 pl-4 text-base placeholder:text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none"
-              placeholder="Ask me anything about hospital policies, procedures, or data..."
+              placeholder="Ask about pediatric protocols, treatment guidelines, or patient outcomes..."
               disabled
             />
             <div className="absolute right-3 flex items-center gap-1">

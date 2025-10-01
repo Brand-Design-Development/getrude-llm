@@ -6,21 +6,6 @@ export default function ChatPane() {
     <div className="flex h-full flex-col">
       {/* Chat Messages */}
       <div className="flex-1 space-y-6 overflow-y-auto p-6">
-        {/* Welcome Message */}
-        <div className="py-8 text-center">
-          <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
-            <Bot className="h-6 w-6 text-blue-600" />
-          </div>
-          <h3 className="mb-2 text-lg font-semibold text-gray-900">
-            Welcome to Getrude AI Assistant
-          </h3>
-          <p className="mx-auto max-w-md text-gray-600">
-            Ask me anything about hospital policies, procedures, patient data,
-            or medical guidelines. I'm here to help with accurate, source-backed
-            answers.
-          </p>
-        </div>
-
         {/* Conversation */}
         <div className="space-y-6">
           {/* User Message */}
@@ -31,7 +16,8 @@ export default function ChatPane() {
             <div className="flex-1">
               <div className="max-w-[80%] rounded-2xl rounded-tl-md bg-blue-50 px-4 py-3">
                 <p className="text-base text-gray-900">
-                  What is the hospital policy on X?
+                  What are the current pediatric dosing guidelines for
+                  amoxicillin in children under 2 years?
                 </p>
               </div>
               <div className="mt-1 ml-1 flex items-center gap-2">
@@ -49,10 +35,20 @@ export default function ChatPane() {
             <div className="flex-1">
               <div className="max-w-[85%] rounded-2xl rounded-tl-md border border-gray-200 bg-white px-4 py-3 shadow-sm">
                 <p className="mb-3 text-base text-gray-900">
-                  The hospital policy on X is outlined in our comprehensive
-                  guidelines. According to the latest policy handbook, all staff
-                  must follow specific protocols when handling patient
-                  information and medical procedures.
+                  Based on our current pediatric pharmacy protocols, for
+                  children under 2 years, the recommended dosing for amoxicillin
+                  is:
+                  <br />
+                  <br />• <strong>Standard dose:</strong> 20-40 mg/kg/day
+                  divided into 2-3 doses
+                  <br />• <strong>For severe infections:</strong> Up to 80-90
+                  mg/kg/day
+                  <br />• <strong>Duration:</strong> Typically 7-10 days
+                  <br />
+                  <br />
+                  Always consider the child's weight, severity of infection, and
+                  any underlying conditions. Liquid formulation is preferred for
+                  this age group.
                 </p>
 
                 {/* Sources Section */}
@@ -68,10 +64,10 @@ export default function ChatPane() {
                       <div className="h-2 w-2 rounded-full bg-blue-600"></div>
                       <div className="flex-1">
                         <p className="text-sm font-medium text-gray-900">
-                          Policy Handbook Section 4.2
+                          Pediatric Pharmacy Guidelines v2.1
                         </p>
                         <p className="text-xs text-gray-600">
-                          Updated: Sep 1, 2025 • Page 42-45
+                          Updated: Nov 15, 2024 • Section 3.4-3.7
                         </p>
                       </div>
                       <CheckCircle className="h-4 w-4 text-green-500" />
@@ -132,7 +128,7 @@ export default function ChatPane() {
                   </span>
                 </div>
                 <p className="mb-3 text-base text-red-700">
-                  I don't have enough credits to process this request. Please
+                  You don't have enough credits to process this request. Please
                   purchase more credits to continue.
                 </p>
 

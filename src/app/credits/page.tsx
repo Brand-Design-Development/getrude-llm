@@ -1,27 +1,27 @@
 export default function CreditsPage() {
   return (
-    <div className="mx-auto max-w-7xl p-6">
+    <div className="w-full p-6">
       <div className="mb-8">
         <h1 className="mb-2 text-3xl font-bold text-gray-900">
-          Purchase Credits
+          API Credit Management
         </h1>
         <p className="text-gray-600">
-          Choose a plan that fits your needs. Credits are used for AI queries
-          and data analysis.
+          Choose a plan that fits your organization's data access needs. Credits
+          are used for API queries, data analysis, and AI-powered insights.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 xl:grid-cols-4">
         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
           <div className="text-center">
-            <h2 className="mb-2 text-xl font-semibold text-gray-900">
-              Starter
-            </h2>
+            <h2 className="mb-2 text-xl font-semibold text-gray-900">Basic</h2>
             <div className="mb-4">
-              <span className="text-3xl font-bold text-gray-900">$10</span>
-              <span className="ml-1 text-gray-600">/100 credits</span>
+              <span className="text-3xl font-bold text-gray-900">$50</span>
+              <span className="ml-1 text-gray-600">/1K credits</span>
             </div>
-            <p className="mb-6 text-gray-600">Perfect for occasional use</p>
+            <p className="mb-6 text-gray-600">
+              For small clinics and practices
+            </p>
             <button
               className="w-full rounded-lg bg-blue-600 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
               disabled
@@ -72,8 +72,8 @@ export default function CreditsPage() {
           <div className="text-center">
             <h2 className="mb-2 text-xl font-semibold text-gray-900">Pro</h2>
             <div className="mb-4">
-              <span className="text-3xl font-bold text-gray-900">$40</span>
-              <span className="ml-1 text-gray-600">/500 credits</span>
+              <span className="text-3xl font-bold text-gray-900">$100</span>
+              <span className="ml-1 text-gray-600">/1k credits</span>
             </div>
             <p className="mb-6 text-gray-600">Best value for regular users</p>
             <button
@@ -137,8 +137,8 @@ export default function CreditsPage() {
               Enterprise
             </h2>
             <div className="mb-4">
-              <span className="text-3xl font-bold text-gray-900">$120</span>
-              <span className="ml-1 text-gray-600">/2000 credits</span>
+              <span className="text-3xl font-bold text-gray-900">$500</span>
+              <span className="ml-1 text-gray-600">/1k credits</span>
             </div>
             <p className="mb-6 text-gray-600">For teams and heavy usage</p>
             <button

@@ -8,7 +8,7 @@ import Sidebar from "./_components/Sidebar";
 import TopBar from "./_components/TopBar";
 
 export const metadata: Metadata = {
-  title: "Getrude LLM",
+  title: "Getrude Chat",
   description:
     "Your secure hospital AI assistant. Ask questions, analyze data, and manage your credits all in one modern dashboard.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],

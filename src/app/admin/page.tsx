@@ -1,28 +1,31 @@
 export default function AdminPage() {
   return (
-    <div className="mx-auto max-w-7xl p-6">
+    <div className="w-full p-6">
       <div className="mb-8">
-        <h1 className="mb-2 text-3xl font-bold text-gray-900">Admin Panel</h1>
+        <h1 className="mb-2 text-3xl font-bold text-gray-900">
+          Platform Administration
+        </h1>
         <p className="text-gray-600">
-          Manage users, pricing, and system settings.
+          Manage partner organizations, API pricing, system performance, and
+          platform-wide settings.
         </p>
       </div>
 
-      <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div className="mb-8 grid grid-cols-1 gap-6 xl:grid-cols-2">
         {/* User Management */}
         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="mb-4 text-lg font-semibold text-gray-900">
-            User Management
+            Partner Organizations
           </h2>
           <div className="overflow-hidden">
             <table className="w-full">
               <thead className="bg-gray-50">
                 <tr>
                   <th className="px-4 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
-                    User
+                    Organization
                   </th>
                   <th className="px-4 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
-                    Role
+                    Plan
                   </th>
                   <th className="px-4 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
                     Credits

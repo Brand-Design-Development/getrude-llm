@@ -1,10 +1,11 @@
 export default function HistoryPage() {
   return (
-    <div className="mx-auto max-w-7xl p-6">
+    <div className="w-full p-6">
       <div className="mb-8">
         <h1 className="mb-2 text-3xl font-bold text-gray-900">Query History</h1>
         <p className="text-gray-600">
-          Review your past queries, responses, and credit usage.
+          Monitor all data queries, responses, and API usage across your
+          organization and partner institutions.
         </p>
       </div>
 
@@ -18,6 +19,9 @@ export default function HistoryPage() {
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
                   Response
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                  Organization
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
                   Credits
@@ -37,13 +41,56 @@ export default function HistoryPage() {
               <tr className="hover:bg-gray-50">
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="max-w-xs truncate text-sm text-gray-900">
-                    What is the hospital policy on X?
+                    What are the current pediatric dosing guidelines for
+                    amoxicillin in children under 2 years?
                   </div>
                 </td>
                 <td className="px-6 py-4">
                   <div className="max-w-xs truncate text-sm text-gray-900">
-                    The hospital policy on X is outlined in our comprehensive
-                    guidelines...
+                    Standard dose: 20-40 mg/kg/day divided into 2-3 doses. For
+                    severe infections: Up to 80-90 mg/kg/day...
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900">
+                    Children's Medical Center
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
+                    3 credits
+                  </span>
+                </td>
+                <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                  Oct 1, 2025 2:31 PM
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
+                    Success
+                  </span>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                    Pediatric Guidelines
+                  </span>
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="max-w-xs truncate text-sm text-gray-900">
+                    What are the latest COVID-19 protocols for patient
+                    admission?
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <div className="max-w-xs truncate text-sm text-gray-900">
+                    Current COVID-19 protocols require temperature screening,
+                    vaccination verification...
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900">
+                    St. Mary's Hospital
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
@@ -77,6 +124,11 @@ export default function HistoryPage() {
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900">
+                    Metro General Hospital
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
                   <span className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
                     0 credits
                   </span>
@@ -106,6 +158,11 @@ export default function HistoryPage() {
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900">
+                    Regional Medical Center
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
                   <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
                     4 credits
                   </span>
@@ -132,8 +189,8 @@ export default function HistoryPage() {
       <div className="mt-6 flex items-center justify-between">
         <p className="text-sm text-gray-700">
           Showing <span className="font-medium">1</span> to{" "}
-          <span className="font-medium">3</span> of{" "}
-          <span className="font-medium">3</span> results
+          <span className="font-medium">4</span> of{" "}
+          <span className="font-medium">4</span> results
         </p>
         <div className="flex items-center gap-2">
           <button

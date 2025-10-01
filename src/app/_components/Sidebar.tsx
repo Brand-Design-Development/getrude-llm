@@ -46,7 +46,7 @@ export default function Sidebar() {
         })}
       </nav>
       <div className="border-t border-gray-100 p-4 text-sm text-gray-500">
-        © {new Date().getFullYear()} Getrude LLM
+        © {new Date().getFullYear()} Getrude Chat
       </div>
     </aside>
   );

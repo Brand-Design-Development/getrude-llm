@@ -14,7 +14,9 @@ export default function TopBar() {
             className="h-10 w-10 object-contain"
           />
         </div>
-        <span className="text-xl font-semibold text-gray-900">Getrude LLM</span>
+        <span className="text-xl font-semibold text-gray-900">
+          Getrude Chat
+        </span>
       </div>
       <div className="flex items-center gap-4">
         <CreditBadge credits={42} />
