@@ -53,7 +53,7 @@ export default function HistoryPage() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="text-sm text-gray-900">
-                    Children's Medical Center
+                    Children&apos;s Medical Center
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
@@ -90,7 +90,7 @@ export default function HistoryPage() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="text-sm text-gray-900">
-                    St. Mary's Hospital
+                    St. Mary&apos;s Hospital
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">

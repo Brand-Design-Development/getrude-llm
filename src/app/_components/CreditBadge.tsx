@@ -3,7 +3,7 @@ interface CreditBadgeProps {
   low?: boolean;
 }
 
-export default function CreditBadge({ credits, low }: CreditBadgeProps) {
+export default function CreditBadge({ credits, low: _low }: CreditBadgeProps) {
   let colorClasses = "bg-blue-100 text-blue-700";
   if (credits < 10) colorClasses = "bg-orange-100 text-orange-700";
   if (credits < 3) colorClasses = "bg-red-100 text-red-700";

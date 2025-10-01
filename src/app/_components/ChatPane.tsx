@@ -1,5 +1,4 @@
 import { FileText, Clock, CheckCircle, XCircle, Bot, User } from "lucide-react";
-import SourceList from "./SourceList";
 
 export default function ChatPane() {
   return (
@@ -46,7 +45,7 @@ export default function ChatPane() {
                   <br />• <strong>Duration:</strong> Typically 7-10 days
                   <br />
                   <br />
-                  Always consider the child's weight, severity of infection, and
+                  Always consider the child&apos;s weight, severity of infection, and
                   any underlying conditions. Liquid formulation is preferred for
                   this age group.
                 </p>
@@ -128,7 +127,7 @@ export default function ChatPane() {
                   </span>
                 </div>
                 <p className="mb-3 text-base text-red-700">
-                  You don't have enough credits to process this request. Please
+                  You don&apos;t have enough credits to process this request. Please
                   purchase more credits to continue.
                 </p>
 

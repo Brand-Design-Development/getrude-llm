@@ -41,10 +41,11 @@ export const authConfig = {
       async authorize(credentials) {
         // Simple demo: accept any username/password, or hardcode a user
         if (credentials?.username && credentials?.password) {
+          const username = typeof credentials.username === 'string' ? credentials.username : '';
           return {
             id: "1",
-            name: String(credentials.username),
-            email: String(credentials.username) + "@demo.local",
+            name: username,
+            email: username + "@demo.local",
           };
         }
         return null;

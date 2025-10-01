@@ -6,7 +6,7 @@ export default function CreditsPage() {
           API Credit Management
         </h1>
         <p className="text-gray-600">
-          Choose a plan that fits your organization's data access needs. Credits
+          Choose a plan that fits your organization&apos;s data access needs. Credits
           are used for API queries, data analysis, and AI-powered insights.
         </p>
       </div>

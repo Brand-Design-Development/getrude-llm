@@ -6,7 +6,7 @@ export default function SettingsPage() {
           Organization Settings
         </h1>
         <p className="text-gray-600">
-          Manage your organization's account settings, API preferences, and data
+          Manage your organization&apos;s account settings, API preferences, and data
           access controls.
         </p>
       </div>

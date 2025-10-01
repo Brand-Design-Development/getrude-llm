@@ -1,6 +1,5 @@
 import ChatPane from "../_components/ChatPane";
 import PromptInput from "../_components/PromptInput";
-import CreditBadge from "../_components/CreditBadge";
 
 export default function ChatPage() {
   return (
