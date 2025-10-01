@@ -26,15 +26,15 @@ export default function RootLayout({
     <html lang="en" className={`${geist.variable}`}>
       <body className="min-h-screen bg-gray-50">
         <TRPCReactProvider>
-          <div className="flex h-screen">
-            {/* Sidebar */}
-            <div className="hidden md:block">
-              <Sidebar />
-            </div>
-            <div className="flex min-w-0 flex-1 flex-col">
-              {/* TopBar */}
-              <TopBar />
-              <main className="min-h-0 flex-1 overflow-y-auto bg-gray-50">
+          <div className="flex h-screen flex-col">
+            {/* TopBar - Full Width */}
+            <TopBar />
+            <div className="flex flex-1 overflow-hidden">
+              {/* Sidebar */}
+              <div className="hidden md:block">
+                <Sidebar />
+              </div>
+              <main className="flex-1 overflow-y-auto bg-gray-50">
                 {children}
               </main>
             </div>

@@ -14,7 +14,7 @@ export default function SourceList({ sources }: SourceListProps) {
       {sources.map((src, i) => (
         <span
           key={i}
-          className="inline-flex items-center rounded-md bg-blue-100 px-2 py-1 text-xs font-medium text-blue-700"
+          className="inline-flex items-center rounded-md bg-blue-100 px-2 py-1 text-sm font-medium text-blue-700"
           title={`${src.title} (${src.date}): ${src.snippet}`}
         >
           {src.title}
