@@ -1,42 +1,214 @@
 export default function CreditsPage() {
   return (
-    <div className="p-8">
-      <h1 className="mb-4 text-xl font-bold text-[#0096d6]">
-        Purchase Credits
-      </h1>
+    <div className="mx-auto max-w-7xl p-6">
+      <div className="mb-8">
+        <h1 className="mb-2 text-3xl font-bold text-gray-900">
+          Purchase Credits
+        </h1>
+        <p className="text-gray-600">
+          Choose a plan that fits your needs. Credits are used for AI queries
+          and data analysis.
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        <div className="rounded border-t-4 border-[#0096d6] bg-white p-6 shadow">
-          <h2 className="text-lg font-semibold">Starter</h2>
-          <p>100 credits</p>
-          <p className="my-2 text-2xl font-bold">$10</p>
-          <button
-            className="mt-2 w-full rounded bg-[#0096d6] py-2 text-white"
-            disabled
-          >
-            Buy
-          </button>
+        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div className="text-center">
+            <h2 className="mb-2 text-xl font-semibold text-gray-900">
+              Starter
+            </h2>
+            <div className="mb-4">
+              <span className="text-3xl font-bold text-gray-900">$10</span>
+              <span className="ml-1 text-gray-600">/100 credits</span>
+            </div>
+            <p className="mb-6 text-gray-600">Perfect for occasional use</p>
+            <button
+              className="w-full rounded-lg bg-blue-600 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+              disabled
+            >
+              Purchase
+            </button>
+          </div>
+          <div className="mt-6 border-t border-gray-100 pt-6">
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex items-center">
+                <svg
+                  className="mr-2 h-4 w-4 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Basic AI queries
+              </li>
+              <li className="flex items-center">
+                <svg
+                  className="mr-2 h-4 w-4 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Policy lookup
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="rounded border-t-4 border-[#0096d6] bg-white p-6 shadow">
-          <h2 className="text-lg font-semibold">Pro</h2>
-          <p>500 credits</p>
-          <p className="my-2 text-2xl font-bold">$40</p>
-          <button
-            className="mt-2 w-full rounded bg-[#0096d6] py-2 text-white"
-            disabled
-          >
-            Buy
-          </button>
+
+        <div className="relative rounded-xl border-2 border-blue-200 bg-white p-6 shadow-sm">
+          <div className="absolute -top-3 left-1/2 -translate-x-1/2 transform">
+            <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-medium text-white">
+              Most Popular
+            </span>
+          </div>
+          <div className="text-center">
+            <h2 className="mb-2 text-xl font-semibold text-gray-900">Pro</h2>
+            <div className="mb-4">
+              <span className="text-3xl font-bold text-gray-900">$40</span>
+              <span className="ml-1 text-gray-600">/500 credits</span>
+            </div>
+            <p className="mb-6 text-gray-600">Best value for regular users</p>
+            <button
+              className="w-full rounded-lg bg-blue-600 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+              disabled
+            >
+              Purchase
+            </button>
+          </div>
+          <div className="mt-6 border-t border-gray-100 pt-6">
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex items-center">
+                <svg
+                  className="mr-2 h-4 w-4 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Advanced AI queries
+              </li>
+              <li className="flex items-center">
+                <svg
+                  className="mr-2 h-4 w-4 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Data analysis
+              </li>
+              <li className="flex items-center">
+                <svg
+                  className="mr-2 h-4 w-4 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Priority support
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="rounded border-t-4 border-[#0096d6] bg-white p-6 shadow">
-          <h2 className="text-lg font-semibold">Enterprise</h2>
-          <p>2000 credits</p>
-          <p className="my-2 text-2xl font-bold">$120</p>
-          <button
-            className="mt-2 w-full rounded bg-[#0096d6] py-2 text-white"
-            disabled
-          >
-            Buy
-          </button>
+
+        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div className="text-center">
+            <h2 className="mb-2 text-xl font-semibold text-gray-900">
+              Enterprise
+            </h2>
+            <div className="mb-4">
+              <span className="text-3xl font-bold text-gray-900">$120</span>
+              <span className="ml-1 text-gray-600">/2000 credits</span>
+            </div>
+            <p className="mb-6 text-gray-600">For teams and heavy usage</p>
+            <button
+              className="w-full rounded-lg bg-blue-600 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+              disabled
+            >
+              Purchase
+            </button>
+          </div>
+          <div className="mt-6 border-t border-gray-100 pt-6">
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex items-center">
+                <svg
+                  className="mr-2 h-4 w-4 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Unlimited queries
+              </li>
+              <li className="flex items-center">
+                <svg
+                  className="mr-2 h-4 w-4 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Bulk data processing
+              </li>
+              <li className="flex items-center">
+                <svg
+                  className="mr-2 h-4 w-4 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Dedicated support
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-12 rounded-xl bg-blue-50 p-6">
+        <h3 className="mb-2 text-lg font-semibold text-gray-900">
+          Current Balance
+        </h3>
+        <p className="mb-4 text-gray-600">
+          You currently have 42 credits remaining.
+        </p>
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-gray-600">
+            Last purchase: Pro Plan (500 credits)
+          </span>
+          <span className="text-sm text-gray-500">Jan 15, 2025</span>
         </div>
       </div>
     </div>

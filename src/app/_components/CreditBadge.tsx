@@ -4,13 +4,13 @@ interface CreditBadgeProps {
 }
 
 export default function CreditBadge({ credits, low }: CreditBadgeProps) {
-  let color = "#0096d6";
-  if (credits < 10) color = "#f59e42";
-  if (credits < 3) color = "#e53e3e";
+  let colorClasses = "bg-blue-100 text-blue-700";
+  if (credits < 10) colorClasses = "bg-orange-100 text-orange-700";
+  if (credits < 3) colorClasses = "bg-red-100 text-red-700";
+
   return (
     <span
-      className="rounded-full px-3 py-1 font-semibold text-white"
-      style={{ background: color }}
+      className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${colorClasses}`}
     >
       {credits} credits
     </span>

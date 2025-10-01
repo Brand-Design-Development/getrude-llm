@@ -1,37 +1,155 @@
 export default function HistoryPage() {
   return (
-    <div className="p-8">
-      <h1 className="mb-4 text-xl font-bold text-[#0096d6]">Query History</h1>
-      <table className="w-full rounded bg-white shadow">
-        <thead>
-          <tr className="bg-[#0096d6] text-white">
-            <th className="p-2">Prompt</th>
-            <th className="p-2">Response</th>
-            <th className="p-2">Credits</th>
-            <th className="p-2">Time</th>
-            <th className="p-2">Status</th>
-            <th className="p-2">Sources</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="p-2">What is the hospital policy on X?</td>
-            <td className="p-2">The hospital policy on X is...</td>
-            <td className="p-2">3</td>
-            <td className="p-2">2025-10-01</td>
-            <td className="p-2 text-green-600">Success</td>
-            <td className="p-2">Policy Handbook</td>
-          </tr>
-          <tr>
-            <td className="p-2">Show me patient stats</td>
-            <td className="p-2">Insufficient credits</td>
-            <td className="p-2">0</td>
-            <td className="p-2">2025-10-01</td>
-            <td className="p-2 text-red-600">Failed</td>
-            <td className="p-2">-</td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="mx-auto max-w-7xl p-6">
+      <div className="mb-8">
+        <h1 className="mb-2 text-3xl font-bold text-gray-900">Query History</h1>
+        <p className="text-gray-600">
+          Review your past queries, responses, and credit usage.
+        </p>
+      </div>
+
+      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead className="border-b border-gray-200 bg-gray-50">
+              <tr>
+                <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                  Query
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                  Response
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                  Credits
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                  Time
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                  Status
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                  Sources
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              <tr className="hover:bg-gray-50">
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="max-w-xs truncate text-sm text-gray-900">
+                    What is the hospital policy on X?
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <div className="max-w-xs truncate text-sm text-gray-900">
+                    The hospital policy on X is outlined in our comprehensive
+                    guidelines...
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
+                    3 credits
+                  </span>
+                </td>
+                <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                  Oct 1, 2025 2:30 PM
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
+                    Success
+                  </span>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                    Policy Handbook
+                  </span>
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="max-w-xs truncate text-sm text-gray-900">
+                    Show me patient stats
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <div className="max-w-xs truncate text-sm text-gray-900">
+                    Insufficient credits to process this request
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                    0 credits
+                  </span>
+                </td>
+                <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                  Oct 1, 2025 2:25 PM
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800">
+                    Failed
+                  </span>
+                </td>
+                <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                  -
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="max-w-xs truncate text-sm text-gray-900">
+                    What are the emergency procedures?
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <div className="max-w-xs truncate text-sm text-gray-900">
+                    Emergency procedures include immediate assessment, triage
+                    protocols...
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
+                    4 credits
+                  </span>
+                </td>
+                <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                  Oct 1, 2025 1:15 PM
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
+                    Success
+                  </span>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                    Emergency Manual
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="mt-6 flex items-center justify-between">
+        <p className="text-sm text-gray-700">
+          Showing <span className="font-medium">1</span> to{" "}
+          <span className="font-medium">3</span> of{" "}
+          <span className="font-medium">3</span> results
+        </p>
+        <div className="flex items-center gap-2">
+          <button
+            className="px-3 py-1 text-sm text-gray-500 hover:text-gray-700 disabled:opacity-50"
+            disabled
+          >
+            Previous
+          </button>
+          <button
+            className="px-3 py-1 text-sm text-gray-500 hover:text-gray-700 disabled:opacity-50"
+            disabled
+          >
+            Next
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

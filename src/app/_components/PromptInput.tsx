@@ -8,21 +8,25 @@ export default function PromptInput({
   canSubmit,
 }: PromptInputProps) {
   return (
-    <div className="flex items-center gap-2">
-      <input
-        className="flex-1 rounded border p-2"
-        placeholder="Type your prompt..."
-        disabled
-      />
-      <span className="text-sm text-gray-500">
-        Est. {estimatedCredits} credits
-      </span>
-      <button
-        className="rounded bg-[#0096d6] px-4 py-2 text-white disabled:opacity-50"
-        disabled={!canSubmit}
-      >
-        Submit
-      </button>
+    <div className="flex items-center gap-3">
+      <div className="flex-1">
+        <input
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+          placeholder="Ask me anything about hospital policies, procedures, or data..."
+          disabled
+        />
+      </div>
+      <div className="flex items-center gap-2">
+        <span className="text-xs whitespace-nowrap text-gray-500">
+          ~{estimatedCredits} credits
+        </span>
+        <button
+          className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-3 text-sm font-medium text-white transition-colors duration-200 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+          disabled={!canSubmit}
+        >
+          Send
+        </button>
+      </div>
     </div>
   );
 }

@@ -10,16 +10,16 @@ interface SourceListProps {
 
 export default function SourceList({ sources }: SourceListProps) {
   return (
-    <ul className="flex gap-2">
+    <div className="flex gap-1">
       {sources.map((src, i) => (
-        <li
+        <span
           key={i}
-          className="rounded bg-[#0096d6] px-2 py-1 text-xs text-white"
+          className="inline-flex items-center rounded-md bg-blue-100 px-2 py-1 text-xs font-medium text-blue-700"
+          title={`${src.title} (${src.date}): ${src.snippet}`}
         >
-          <span className="font-semibold">{src.title}</span>{" "}
-          <span className="opacity-80">({src.date})</span>
-        </li>
+          {src.title}
+        </span>
       ))}
-    </ul>
+    </div>
   );
 }

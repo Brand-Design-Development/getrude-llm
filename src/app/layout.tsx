@@ -24,7 +24,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable}`}>
-      <body className="min-h-screen bg-gray-100">
+      <body className="min-h-screen bg-gray-50">
         <TRPCReactProvider>
           <div className="flex h-screen">
             {/* Sidebar */}
@@ -34,7 +34,9 @@ export default function RootLayout({
             <div className="flex min-w-0 flex-1 flex-col">
               {/* TopBar */}
               <TopBar />
-              <main className="min-h-0 flex-1 overflow-y-auto">{children}</main>
+              <main className="min-h-0 flex-1 overflow-y-auto bg-gray-50">
+                {children}
+              </main>
             </div>
           </div>
         </TRPCReactProvider>
