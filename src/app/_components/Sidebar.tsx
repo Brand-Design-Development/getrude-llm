@@ -8,7 +8,6 @@ import {
   History,
   CreditCard,
   Settings,
-  Shield,
 } from "lucide-react";
 
 const navItems = [

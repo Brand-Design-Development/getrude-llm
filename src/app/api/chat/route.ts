@@ -1,9 +1,10 @@
-import { NextRequest, NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import { env } from "@getrude-llm/env";
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const body = (await req.json()) as { message?: unknown };
     const { message } = body;
 
     if (!message || typeof message !== "string") {
@@ -26,7 +27,7 @@ export async function POST(req: NextRequest) {
       throw new Error(`Backend API error: ${response.statusText}`);
     }
 
-    const data = await response.json();
+    const data = (await response.json()) as unknown;
     return NextResponse.json(data);
   } catch (error) {
     console.error("Chat API error:", error);

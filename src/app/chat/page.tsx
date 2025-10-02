@@ -34,7 +34,7 @@ export default function ChatPage() {
         body: JSON.stringify({ message }),
       });
 
-      const data: ApiResponse = await response.json();
+      const data = (await response.json()) as ApiResponse;
 
       if (data.success && data.data) {
         // Add assistant message
