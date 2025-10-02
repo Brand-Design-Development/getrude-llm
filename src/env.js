@@ -15,6 +15,7 @@ export const env = createEnv({
     // AUTH_DISCORD_SECRET: z.string(),
     DATABASE_URL: z.string().url(),
     BACKEND_API_URL: z.string().url(),
+    GEMINI_API_KEY: z.string(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
@@ -39,6 +40,7 @@ export const env = createEnv({
     // AUTH_DISCORD_SECRET: process.env.AUTH_DISCORD_SECRET,
     DATABASE_URL: process.env.DATABASE_URL,
     BACKEND_API_URL: process.env.BACKEND_API_URL,
+    GEMINI_API_KEY: process.env.GEMINI_API_KEY,
     NODE_ENV: process.env.NODE_ENV,
   },
   /**
