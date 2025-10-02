@@ -45,9 +45,9 @@ export default function ChatPane() {
                   <br />• <strong>Duration:</strong> Typically 7-10 days
                   <br />
                   <br />
-                  Always consider the child&apos;s weight, severity of infection, and
-                  any underlying conditions. Liquid formulation is preferred for
-                  this age group.
+                  Always consider the child&apos;s weight, severity of
+                  infection, and any underlying conditions. Liquid formulation
+                  is preferred for this age group.
                 </p>
 
                 {/* Sources Section */}
@@ -127,8 +127,8 @@ export default function ChatPane() {
                   </span>
                 </div>
                 <p className="mb-3 text-base text-red-700">
-                  You don&apos;t have enough credits to process this request. Please
-                  purchase more credits to continue.
+                  You don&apos;t have enough credits to process this request.
+                  Please purchase more credits to continue.
                 </p>
 
                 <div className="flex items-center justify-between border-t border-red-200 pt-2">
@@ -175,7 +175,7 @@ export default function ChatPane() {
                   ></div>
                 </div>
                 <span className="text-sm text-gray-500">
-                  Getrude is thinking...
+                  Gertrude is thinking...
                 </span>
               </div>
             </div>

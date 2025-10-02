@@ -11,10 +11,10 @@ export default function Home() {
     <div className="w-full p-6">
       {/* Header Section */}
       <div className="mb-8">
-        <h1 className="mb-2 text-3xl font-bold text-gray-900">Getrude Chat</h1>
+        <h1 className="mb-2 text-3xl font-bold text-gray-900">Gertrude Chat</h1>
         <p className="text-gray-600">
-          Access Getrude&apos;s comprehensive hospital data, medical insights, and
-          policy information through our AI-powered platform. Trusted by
+          Access Gertrude&apos;s comprehensive hospital data, medical insights,
+          and policy information through our AI-powered platform. Trusted by
           healthcare institutions worldwide.
         </p>
       </div>
