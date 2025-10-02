@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type KeyboardEvent } from "react";
+import { useState, useRef, useEffect, type KeyboardEvent } from "react";
 import { Send, Paperclip, Mic } from "lucide-react";
 
 interface PromptInputProps {
@@ -17,9 +17,20 @@ export default function PromptInput({
   isLoading,
 }: PromptInputProps) {
   const [input, setInput] = useState("");
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const shouldFocusRef = useRef(false);
+
+  // Effect to maintain focus after submission
+  useEffect(() => {
+    if (shouldFocusRef.current && !isLoading) {
+      textareaRef.current?.focus();
+      shouldFocusRef.current = false;
+    }
+  }, [isLoading]);
 
   const handleSubmit = () => {
     if (input.trim() && canSubmit) {
+      shouldFocusRef.current = true;
       onSendMessage(input);
       setInput("");
     }
@@ -39,6 +50,7 @@ export default function PromptInput({
         <div className="relative flex-1">
           <div className="flex items-start">
             <textarea
+              ref={textareaRef}
               className="max-h-[200px] min-h-[56px] w-full resize-none rounded-xl border border-gray-300 py-4 pr-20 pl-4 text-base placeholder:text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none disabled:cursor-not-allowed disabled:bg-gray-50"
               placeholder="Ask about pediatric protocols, treatment guidelines, or patient outcomes..."
               value={input}
