@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import {
   FileText,
@@ -12,6 +12,8 @@ import {
   Pill,
   ClipboardList,
   BarChart3,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import type { ChatMessage } from "@getrude-llm/types/chat";
 
@@ -22,6 +24,21 @@ interface ChatPaneProps {
 
 export default function ChatPane({ messages, isLoading }: ChatPaneProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [expandedSources, setExpandedSources] = useState<Set<string>>(
+    new Set(),
+  );
+
+  const toggleSources = (messageId: string) => {
+    setExpandedSources((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(messageId)) {
+        newSet.delete(messageId);
+      } else {
+        newSet.add(messageId);
+      }
+      return newSet;
+    });
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -141,33 +158,45 @@ export default function ChatPane({ messages, isLoading }: ChatPaneProps) {
                           {/* Sources Section */}
                           {msg.sources && msg.sources.length > 0 && (
                             <div className="mt-3 border-t border-gray-100 pt-3">
-                              <div className="mb-2 flex items-center gap-2">
-                                <FileText className="h-4 w-4 text-blue-600" />
-                                <span className="text-sm font-medium text-gray-700">
-                                  Sources
-                                </span>
-                              </div>
-                              <div className="space-y-2">
-                                {msg.sources.map((source, idx) => (
-                                  <div
-                                    key={idx}
-                                    className="flex items-center gap-2 rounded-lg bg-blue-50 p-2"
-                                  >
-                                    <div className="h-2 w-2 rounded-full bg-blue-600"></div>
-                                    <div className="flex-1">
-                                      <p className="text-sm font-medium text-gray-900">
-                                        {source.title}
-                                      </p>
-                                      {source.lastUpdated && (
-                                        <p className="text-xs text-gray-600">
-                                          Updated: {source.lastUpdated}
+                              <button
+                                onClick={() => toggleSources(msg.id)}
+                                className="mb-2 flex w-full cursor-pointer items-center justify-between gap-2 rounded-lg p-2 transition-colors hover:bg-gray-50"
+                              >
+                                <div className="flex items-center gap-2">
+                                  <FileText className="h-4 w-4 text-blue-600" />
+                                  <span className="text-sm font-medium text-gray-700">
+                                    Sources ({msg.sources.length})
+                                  </span>
+                                </div>
+                                {expandedSources.has(msg.id) ? (
+                                  <ChevronUp className="h-4 w-4 text-gray-500" />
+                                ) : (
+                                  <ChevronDown className="h-4 w-4 text-gray-500" />
+                                )}
+                              </button>
+                              {expandedSources.has(msg.id) && (
+                                <div className="space-y-2">
+                                  {msg.sources.map((source, idx) => (
+                                    <div
+                                      key={idx}
+                                      className="flex items-center gap-2 rounded-lg bg-blue-50 p-2"
+                                    >
+                                      <div className="h-2 w-2 rounded-full bg-blue-600"></div>
+                                      <div className="flex-1">
+                                        <p className="text-sm font-medium text-gray-900">
+                                          {source.title}
                                         </p>
-                                      )}
+                                        {source.lastUpdated && (
+                                          <p className="text-xs text-gray-600">
+                                            Updated: {source.lastUpdated}
+                                          </p>
+                                        )}
+                                      </div>
+                                      <CheckCircle className="h-4 w-4 text-green-500" />
                                     </div>
-                                    <CheckCircle className="h-4 w-4 text-green-500" />
-                                  </div>
-                                ))}
-                              </div>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                           )}
 
