@@ -11,25 +11,6 @@ export default function PromptInput({
 }: PromptInputProps) {
   return (
     <div className="space-y-3">
-      {/* Quick Suggestions */}
-      <div className="flex flex-wrap gap-2">
-        <button className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1.5 text-sm text-blue-700 transition-colors hover:bg-blue-100">
-          Pediatric dosing
-        </button>
-        <button className="inline-flex items-center rounded-full bg-green-50 px-3 py-1.5 text-sm text-green-700 transition-colors hover:bg-green-100">
-          Emergency protocols
-        </button>
-        <button className="inline-flex items-center rounded-full bg-purple-50 px-3 py-1.5 text-sm text-purple-700 transition-colors hover:bg-purple-100">
-          Patient outcomes
-        </button>
-        <button className="inline-flex items-center rounded-full bg-orange-50 px-3 py-1.5 text-sm text-orange-700 transition-colors hover:bg-orange-100">
-          Treatment guidelines
-        </button>
-        <button className="inline-flex items-center rounded-full bg-pink-50 px-3 py-1.5 text-sm text-pink-700 transition-colors hover:bg-pink-100">
-          Vaccination schedules
-        </button>
-      </div>
-
       {/* Input Area */}
       <div className="flex items-end gap-3">
         <div className="relative flex-1">
