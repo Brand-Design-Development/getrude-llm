@@ -6,12 +6,13 @@ export default function CreditsPage() {
           API Credit Management
         </h1>
         <p className="text-gray-600">
-          Choose a plan that fits your organization&apos;s data access needs. Credits
-          are used for API queries, data analysis, and AI-powered insights.
+          Choose a plan that fits your organization&apos;s data access needs.
+          Credits are used for API queries, data analysis, and AI-powered
+          insights.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 xl:grid-cols-3">
         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
           <div className="text-center">
             <h2 className="mb-2 text-xl font-semibold text-gray-900">Basic</h2>
