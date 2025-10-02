@@ -17,7 +17,6 @@ const navItems = [
   { name: "History", href: "/history", icon: History },
   { name: "Purchase Credits", href: "/credits", icon: CreditCard },
   { name: "Settings", href: "/settings", icon: Settings },
-  { name: "Admin Panel", href: "/admin", icon: Shield },
 ];
 
 export default function Sidebar() {
