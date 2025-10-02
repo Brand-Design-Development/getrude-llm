@@ -84,10 +84,6 @@ export default function ChatPane() {
                       </span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    <span className="text-xs text-gray-500">Verified</span>
-                  </div>
                 </div>
               </div>
               <div className="mt-1 ml-1 flex items-center gap-2">

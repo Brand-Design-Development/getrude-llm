@@ -32,12 +32,6 @@ export default function PromptInput({
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="text-center">
-            <div className="text-sm font-medium text-gray-700">
-              ~{estimatedCredits}
-            </div>
-            <div className="text-xs text-gray-500">credits</div>
-          </div>
           <button
             className="group inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white transition-colors duration-200 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
             disabled={!canSubmit}
