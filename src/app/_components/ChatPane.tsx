@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import ReactMarkdown from "react-markdown";
 import {
   FileText,
   Clock,
@@ -133,9 +134,9 @@ export default function ChatPane({ messages, isLoading }: ChatPaneProps) {
                         </>
                       ) : (
                         <>
-                          <p className="mb-3 text-base text-gray-900">
-                            {msg.content}
-                          </p>
+                          <div className="prose prose-sm mb-3 max-w-none text-base text-gray-900">
+                            <ReactMarkdown>{msg.content}</ReactMarkdown>
+                          </div>
 
                           {/* Sources Section */}
                           {msg.sources && msg.sources.length > 0 && (
